@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crawler</title>
+</head>
+<body>
+    <h1>
+        Results
+    </h1>
+    <ol>
+        <%if(locals.records) {%>
+            <%for(record of records ){%>
+
+               <li>
+                   <ul>
+
+                  
+                    <li> 
+                        Title : <%=record.title%>
+                    </li> 
+                   <li> Year : <%=record.year%></li>
+                   <li>URL : <a href="<%=record.url%>" ><%=record.url%></a></li>
+                   <li>
+
+                  
+                   <ol>
+                    <%for(author of record.author ){%>
+
+                        Authors
+                        <li>
+                          Name :   <%=author%> 
+                             
+                        </li>
+                        <%}%>
+                   </ol>
+                </li>
+                </ul>
+               </li>
+               <h1>-------------------------------------------------------------------------------------------------------------------------------------------------------</h1>
+               <h1></h1>
+
+            <%}%>
+
+            <%}%>
+    </ol>
+</body>
+</html>

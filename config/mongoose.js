@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');  // requiring mongoose
-mongoose.connect('mongodb://localhost/codeial_dev');  
+mongoose.connect('mongodb://localhost/crawl');  
 
 const db = mongoose.connection;   // if connection succesfull
 
